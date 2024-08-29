@@ -1,22 +1,19 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-console.log('yoo');
-
-data = {'age': 32};
-
-const server = http.createServer((req, res) => {
-    if (req.url === '/') {
-        res.end(`${req.method}`);
-    }
-    else if (req.url === '/demo') {
-        res.end('demooooooo');
-    }
-    else {
-        console.log('server started');
-        res.setHeader('Content-Type', 'application/json');
-        // res.end('<h2>hi brother</h2>');
-        res.end(JSON.stringify(data));
-    }
+app.use((req, res, next) => {
+    res.status(201).send(`${req.method} ${req.hostname}/${req.url}`);
+    next();
 })
 
-server.listen(8080);
+app.get('/', (req, res) => {
+    res.send('<h1>Welcome</h1>');
+})
+
+app.post('/demo', (req, res) => {
+    res.json({msg: 'you posted'});
+})
+
+app.listen(8080, () => {
+    console.log('server running');
+});
