@@ -1,5 +1,7 @@
 DATA_PATH = 'data.json'
 const fs = require('fs');
+const Product = require('../models/user').Product;
+// const Product = Model.Product;
 
 const getProducts = () => {
     return JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
