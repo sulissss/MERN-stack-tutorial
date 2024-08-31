@@ -1,3 +1,6 @@
+// Fetch environment variables
+require('dotenv').config();
+
 // Initialize Express JS
 const express = require('express');
 
@@ -24,7 +27,7 @@ const { Schema } = mongoose;
 main().catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/demo-2');
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('database connected');
 }
 
