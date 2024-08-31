@@ -16,6 +16,7 @@ server = express();
 server.use(express.json());
 // Middleware for handling CORS issues
 server.use(cors());
+
 // Middleware for ensuring that the user gets the REACT static files (frontend) when they enter localhost:8080 into the browser
 server.use(express.static(path.join(__dirname, 'client/build')));
 
