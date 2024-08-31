@@ -7,4 +7,4 @@ const productSchema = new Schema({
     author: String
 });
 
-exports.Product = mongoose.model('User', productSchema);
+exports.Product = mongoose.model('Product', productSchema);

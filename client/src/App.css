@@ -1,0 +1,27 @@
+/* App.css */
+.quote-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+}
+
+.quote-age {
+    font-size: 14px;
+    color: #999;
+}
