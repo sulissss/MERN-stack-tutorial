@@ -6,6 +6,7 @@ exports.addProducts = async (req, res) => {
 }
 
 exports.getAllProducts = async (req, res) => {
+    console.log(req.body);
     res.json(await Product.find({}));
 }
 
